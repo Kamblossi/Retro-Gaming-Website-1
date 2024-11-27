@@ -3,26 +3,105 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Retro Games Club</title>
+  <title>Join the Club</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
+    <h1>Retro Games Club - Join Us!</h1>
     <nav>
       <ul>
         <li><a href="index.html">Home</a></li>
-        <li><a href="games-events.html">Games Events</a></li>
-        <li><a href="join-club.html">Join the Club</a></li>
-        <li><a href="contact-us.html">Contact Us</a></li>
-        <li><a href="about-us.html">About Us</a></li>
+        <li><a href="game-events.html">Games Events</a></li>
+        <li><a href="join-club.html" class="active">Join the Club</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="about.html">About Us</a></li>
       </ul>
     </nav>
   </header>
+
   <main>
-    <!-- Page content goes here -->
+    <section class="form-section">
+      <h2>Sign-Up Form</h2>
+      <p>Join the Retro Games Club and connect with fellow gaming enthusiasts!</p>
+      <form action="https://webdevcit.com/displayvalues.php" method="post" enctype="multipart/form-data">
+        <!-- Name -->
+        <label for="name">Name <span>*</span></label>
+        <input type="text" id="name" name="name" required placeholder="Enter your full name">
+
+        <!-- Email -->
+        <label for="email">Email Address <span>*</span></label>
+        <input type="email" id="email" name="email" required placeholder="Enter your email">
+
+        <!-- Date started in MTU -->
+        <label for="start-date">Date Started in MTU <span>*</span></label>
+        <input type="date" id="start-date" name="start_date" required>
+
+        <!-- MTU Campus -->
+        <label for="campus">MTU Campus <span>*</span></label>
+        <select id="campus" name="campus" required>
+          <option value="" disabled selected>Select your campus</option>
+          <option value="Bishopstown">Bishopstown</option>
+          <option value="Crawford College of Art & Design">Crawford College of Art & Design</option>
+          <option value="Cork School of Music">Cork School of Music</option>
+          <option value="National Maritime College of Ireland">National Maritime College of Ireland</option>
+        </select>
+
+        <!-- Department of Study -->
+        <label for="department">Department of Study</label>
+        <input type="text" id="department" name="department" placeholder="Enter your department">
+
+        <!-- Favourite Retro Game -->
+        <label for="favourite-game">Favourite Retro Game</label>
+        <input type="text" id="favourite-game" name="favourite_game" placeholder="Enter your favourite retro game">
+
+        <!-- Game Interests -->
+        <label>Game Interests</label>
+        <div class="checkbox-group">
+          <label><input type="checkbox" name="game_interests[]" value="Board Games"> Board Games</label>
+          <label><input type="checkbox" name="game_interests[]" value="Arcade Games"> Arcade Games</label>
+          <label><input type="checkbox" name="game_interests[]" value="Console Games"> Console Games</label>
+          <label><input type="checkbox" name="game_interests[]" value="PC Games"> PC Games</label>
+        </div>
+
+        <!-- Attendance History -->
+        <label>Have you previously attended a club event?</label>
+        <label><input type="radio" name="attendance_history" value="yes"> Yes</label>
+        <label><input type="radio" name="attendance_history" value="no"> No</label>
+
+        <!-- Event Interests -->
+        <label for="event-interest">Events of Interest</label>
+        <select id="event-interest" name="event_interest[]" multiple>
+          <option value="Retro Arcade Night">Retro Arcade Night</option>
+          <option value="Board Game Bonanza">Board Game Bonanza</option>
+          <option value="PC Gaming Tournament">PC Gaming Tournament</option>
+          <option value="Console Gaming Championship">Console Gaming Championship</option>
+        </select>
+
+        <!-- Reasons for Joining -->
+        <label for="reasons">Why do you want to join?</label>
+        <textarea id="reasons" name="reasons" rows="4" placeholder="Tell us why you're interested in joining..."></textarea>
+
+        <!-- Membership Card Preference -->
+        <label>Membership Card Preference</label>
+        <label><input type="radio" name="membership_card" value="virtual" checked> Virtual</label>
+        <label><input type="radio" name="membership_card" value="printed"> Printed</label>
+
+        <!-- File Upload -->
+        <label for="photo-upload">Upload a Photo for Membership Card</label>
+        <input type="file" id="photo-upload" name="photo" accept="image/*">
+
+        <!-- Submit and Cancel -->
+        <div class="button-group">
+          <button type="submit">Submit</button>
+          <button type="reset">Cancel</button>
+        </div>
+      </form>
+    </section>
   </main>
+
   <footer>
-    <p>&copy; 2024 Retro Games Club | Developed by [Your Name]</p>
+    <p>&copy; 2024 Retro Games Club. All rights reserved.</p>
   </footer>
 </body>
 </html>

@@ -3,26 +3,70 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Retro Games Club</title>
+  <title>Contact Us</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
+    <h1>Contact Us - Retro Games Club</h1>
     <nav>
       <ul>
         <li><a href="index.html">Home</a></li>
-        <li><a href="games-events.html">Games Events</a></li>
+        <li><a href="game-events.html">Games Events</a></li>
         <li><a href="join-club.html">Join the Club</a></li>
-        <li><a href="contact-us.html">Contact Us</a></li>
-        <li><a href="about-us.html">About Us</a></li>
+        <li><a href="contact.html" class="active">Contact Us</a></li>
+        <li><a href="about.html">About Us</a></li>
       </ul>
     </nav>
   </header>
+
   <main>
-    <!-- Page content goes here -->
+    <section class="contact-section">
+      <h2>MTU Societies Office</h2>
+      <div class="contact-details">
+        <p><strong>Address:</strong> MTU Bishopstown Campus, Cork, Ireland</p>
+        <p><strong>Phone:</strong> +353 21 432 6100</p>
+        <p><strong>Email:</strong> <a href="mailto:societies@mtu.ie">societies@mtu.ie</a></p>
+      </div>
+      
+      <div class="map-container">
+        <h3>Our Location</h3>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2462.7183422757244!2d-8.543463011145052!3d51.8843537!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x484491e0f9d78679%3A0x7b6c37cb2ac0c471!2sMTU%20Bishopstown%20Campus%20Students%20Parking!5e0!3m2!1sen!2ske!4v1732689809705!5m2!1sen!2ske" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </section>
+
+    <section class="form-section">
+      <h2>Contact Form</h2>
+      <form action="https://webdevcit.com/displayvalues.php" method="post">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5" placeholder="Type your message here..." required></textarea>
+
+        <div class="button-group">
+          <button type="submit">Send Message</button>
+          <button type="reset">Clear</button>
+        </div>
+      </form>
+    </section>
+
+    <section class="social-section">
+      <h2>Follow Us</h2>
+      <ul class="social-links">
+        <li><a href="https://facebook.com" target="_blank">Facebook</a></li>
+        <li><a href="https://twitter.com" target="_blank">Twitter</a></li>
+        <li><a href="https://instagram.com" target="_blank">Instagram</a></li>
+        <li><a href="https://reddit.com" target="_blank">Reddit Forum</a></li>
+      </ul>
+    </section>
   </main>
+
   <footer>
-    <p>&copy; 2024 Retro Games Club | Developed by [Your Name]</p>
+    <p>&copy; 2024 Retro Games Club. All rights reserved.</p>
   </footer>
 </body>
 </html>
